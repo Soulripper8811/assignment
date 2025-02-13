@@ -13,7 +13,7 @@ app.use(
     credentials: true,
   })
 );
-const __direname = path.resolve();
+const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRoute);
