@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -12,6 +13,7 @@ app.use(
     credentials: true,
   })
 );
+const __direname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRoute);
